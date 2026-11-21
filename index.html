@@ -5,25 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Battery Sync</title>
   <meta name="description" content="See the battery levels of your iPhone, iPad and Mac in one place, synced through your private iCloud.">
+  <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+    <symbol id="i-ipad" viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></symbol>
+  </svg>
+
   <div class="wrap">
-    <header class="site">
-      <svg class="mark" viewBox="0 0 28 28" aria-hidden="true">
-        <rect x="2" y="7" width="21" height="14" rx="3.5" fill="none" stroke="currentColor" stroke-width="2"/>
-        <rect x="24" y="11" width="2.5" height="6" rx="1.2" fill="currentColor"/>
-        <rect x="5" y="10" width="11" height="8" rx="1.5" fill="#34c759"/>
-      </svg>
-      <a href="/">Battery Sync</a>
+    <nav class="topbar" aria-label="Site">
+      <a class="brand" href="/"><img src="/assets/icon.svg" alt="">Battery Sync</a>
+      <a class="navlink" href="/privacy">Privacy</a>
+    </nav>
+
+    <header class="hero">
+      <img class="app-icon" src="/assets/icon.svg" alt="Battery Sync app icon">
+      <h1>Battery Sync</h1>
+      <p class="lede">See the battery levels of your iPhone, iPad and Mac in one place. Readings sync through your private iCloud and appear in the app, in widgets and in the Mac menu bar.</p>
+      <div class="badges">
+        <span class="badge">Stored in your private iCloud</span>
+        <span class="badge blue">No tracking</span>
+      </div>
     </header>
 
     <main>
-      <h1>Battery Sync</h1>
-      <p>See the battery levels of your iPhone, iPad and Mac in one place. Readings sync through your private iCloud, and appear in the app, in widgets and in the Mac menu bar.</p>
+      <section aria-labelledby="devices">
+        <h2 class="section-title" id="devices">Your devices</h2>
+        <div class="card devices" role="img" aria-label="Example: iPhone at 82 percent, iPad at 64 percent charging, MacBook at 18 percent low">
+          <div class="row">
+            <span class="tile"><svg><use href="#i-phone"/></svg></span>
+            <div class="row-body">
+              <div class="device-head"><span class="device-name">iPhone</span><span class="device-pct">82%</span></div>
+              <div class="bar"><span style="width:82%"></span></div>
+              <div class="device-sub">On battery · measured 2 min ago</div>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile"><svg><use href="#i-ipad"/></svg></span>
+            <div class="row-body">
+              <div class="device-head"><span class="device-name">iPad</span><span class="device-pct">64%</span></div>
+              <div class="bar"><span style="width:64%"></span></div>
+              <div class="device-sub">Charging · measured 6 min ago</div>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile"><svg><use href="#i-laptop"/></svg></span>
+            <div class="row-body">
+              <div class="device-head"><span class="device-name">MacBook</span><span class="device-pct low">18%</span></div>
+              <div class="bar"><span class="low" style="width:18%"></span></div>
+              <div class="device-sub">On battery · measured just now</div>
+            </div>
+          </div>
+        </div>
+        <p class="footnote">Example readings.</p>
+      </section>
+
+      <a class="cta" href="/privacy">Read the privacy policy</a>
     </main>
 
     <footer>
+      <span>Battery Sync for iPhone, iPad and Mac</span>
       <a href="/privacy">Privacy Policy</a>
     </footer>
   </div>
