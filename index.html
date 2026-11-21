@@ -3,75 +3,343 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Battery Sync</title>
-  <meta name="description" content="See the battery levels of your iPhone, iPad and Mac in one place, synced through your private iCloud.">
+  <title>Battery Sync for iPhone, iPad and Mac</title>
+  <meta name="description" content="See the battery level of your iPhone, iPad and Mac on each other: in the Mac menu bar, in widgets and in the app. Synced through your private iCloud.">
   <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Battery Sync">
+  <meta property="og:description" content="Your iPhone, iPad and Mac batteries, on each other. Synced through your private iCloud.">
+  <link rel="canonical" href="https://batterysynceverywhere.url2.at/">
   <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/home.css">
 </head>
-<body>
+<body class="home">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
-    <symbol id="i-ipad" viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
-    <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></symbol>
+    <symbol id="g-laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.6"/><path d="M2 19h20"/></symbol>
+    <symbol id="g-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.6"/><path d="M11 5h2"/></symbol>
+    <symbol id="g-ipad" viewBox="0 0 24 24"><rect x="4.5" y="2.5" width="15" height="19" rx="2.4"/><path d="M11 18.6h2"/></symbol>
+    <symbol id="g-bolt" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M13.2 2 4.8 13.4h6.1L9.9 22l8.4-11.4h-6.1z"/></symbol>
+    <symbol id="g-pause" viewBox="0 0 24 24"><rect fill="currentColor" stroke="none" x="6.5" y="5" width="3.6" height="14" rx="1"/><rect fill="currentColor" stroke="none" x="13.9" y="5" width="3.6" height="14" rx="1"/></symbol>
+    <symbol id="g-window" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2.2"/><path d="M3 9h18"/><path d="M6 6.8h.01M8.4 6.8h.01"/></symbol>
+    <symbol id="g-refresh" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M19.6 4.2v3.6H16"/></symbol>
+    <symbol id="g-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M7.1 6.3a7.5 7.5 0 1 0 9.8 0"/></symbol>
+    <symbol id="g-battery" viewBox="0 0 24 24"><rect x="2" y="7.5" width="17.5" height="9" rx="2.4"/><path d="M22 10.8v2.4"/><rect fill="currentColor" stroke="none" x="4" y="9.5" width="3.5" height="5" rx=".8"/></symbol>
+    <symbol id="g-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="g-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
   </svg>
 
-  <div class="wrap">
-    <nav class="topbar" aria-label="Site">
+  <nav class="site-nav" aria-label="Site">
+    <div class="container nav-inner">
       <a class="brand" href="/"><img src="/assets/icon.svg" alt="">Battery Sync</a>
-      <a class="navlink" href="/privacy">Privacy</a>
-    </nav>
-
-    <header class="hero">
-      <img class="app-icon" src="/assets/icon.svg" alt="Battery Sync app icon">
-      <h1>Battery Sync</h1>
-      <p class="lede">See the battery levels of your iPhone, iPad and Mac in one place. Readings sync through your private iCloud and appear in the app, in widgets and in the Mac menu bar.</p>
-      <div class="badges">
-        <span class="badge">Stored in your private iCloud</span>
-        <span class="badge blue">No tracking</span>
+      <div class="nav-links">
+        <a href="#widgets">Widgets</a>
+        <a href="#freshness">Freshness</a>
+        <a href="#check">Check now</a>
+        <a href="/privacy">Privacy</a>
       </div>
-    </header>
+    </div>
+  </nav>
 
-    <main>
-      <section aria-labelledby="devices">
-        <h2 class="section-title" id="devices">Your devices</h2>
-        <div class="card devices" role="img" aria-label="Example: iPhone at 82 percent, iPad at 64 percent charging, MacBook at 18 percent low">
-          <div class="row">
-            <span class="tile"><svg><use href="#i-phone"/></svg></span>
-            <div class="row-body">
-              <div class="device-head"><span class="device-name">iPhone</span><span class="device-pct">82%</span></div>
-              <div class="bar"><span style="width:82%"></span></div>
-              <div class="device-sub">On battery · measured 2 min ago</div>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">For iPhone, iPad and Mac</p>
+        <h1>Your iPad is at&nbsp;18%.<br><span>Now you know.</span></h1>
+        <p class="hero-lede">Battery Sync shows the battery of every device you own on every other one: in the Mac menu bar, in widgets on your iPhone and iPad, and in the app. It syncs through your own private iCloud.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#how">See how it works <svg class="g"><use href="#g-arrow"/></svg></a>
+          <a class="button" href="/privacy">Read the privacy policy</a>
+        </div>
+        <p class="hero-note">Requires iOS 27, iPadOS 27 or macOS 27 and the same Apple Account on each device.</p>
+      </div>
+
+      <div class="hero-visual" aria-label="The Battery Sync menu bar popover on a Mac, listing an iPad at 18 percent, a MacBook Air at 76 percent and charging, an iPhone at 54 percent, and a work iPhone whose reading is stale." role="img">
+        <div class="desk">
+          <div class="menubar" aria-hidden="true">
+            <span class="mb-left"><b>Finder</b><span>File</span><span>Edit</span><span>View</span></span>
+            <span class="mb-right">
+              <span class="mb-item active"><svg class="g"><use href="#g-ipad"/></svg>18%</span>
+              <span class="mb-clock">Sat Nov 21&nbsp; 9:41 AM</span>
+            </span>
+          </div>
+          <div class="popover" aria-hidden="true">
+            <div class="pop-head">
+              <img src="/assets/icon.svg" alt="" class="pop-icon">
+              <div class="pop-title"><b>Battery Sync</b><span>Checked 9:41 AM</span></div>
+              <div class="pop-buttons">
+                <span class="pbtn"><svg class="g"><use href="#g-pause"/></svg></span>
+                <span class="pbtn"><svg class="g"><use href="#g-window"/></svg></span>
+                <span class="pbtn"><svg class="g"><use href="#g-refresh"/></svg></span>
+                <span class="pbtn"><svg class="g"><use href="#g-power"/></svg></span>
+              </div>
+            </div>
+            <div class="pop-rows">
+              <div class="drow alert">
+                <span class="dtile"><svg class="g"><use href="#g-ipad"/></svg></span>
+                <div class="dbody">
+                  <div class="dline"><b>iPad</b><span class="pct low">18%</span></div>
+                  <div class="lbar"><i class="low" style="width:18%"></i></div>
+                  <div class="dline sub"><span>On battery · low when last measured</span><span class="fresh recent"><i class="dot"></i>12 min ago</span></div>
+                </div>
+              </div>
+              <div class="drow">
+                <span class="dtile"><svg class="g"><use href="#g-laptop"/></svg></span>
+                <div class="dbody">
+                  <div class="dline"><span><b>MacBook Air</b> <span class="muted">· This Mac</span></span><span class="pct">76%</span></div>
+                  <div class="lbar"><i style="width:76%"></i></div>
+                  <div class="dline sub"><span><svg class="g bolt"><use href="#g-bolt"/></svg>Charging</span><span class="fresh recent"><i class="dot"></i>Just now</span></div>
+                </div>
+              </div>
+              <div class="drow">
+                <span class="dtile"><svg class="g"><use href="#g-phone"/></svg></span>
+                <div class="dbody">
+                  <div class="dline"><b>iPhone</b><span class="pct">54%</span></div>
+                  <div class="lbar"><i style="width:54%"></i></div>
+                  <div class="dline sub"><span>On battery</span><span class="fresh recent"><i class="dot"></i>4 min ago</span></div>
+                </div>
+              </div>
+              <div class="drow stale">
+                <span class="dtile"><svg class="g"><use href="#g-phone"/></svg></span>
+                <div class="dbody">
+                  <div class="dline"><b>Work iPhone</b><span class="pct">63%</span></div>
+                  <div class="lbar"><i class="hatch" style="width:63%"></i></div>
+                  <div class="dline sub"><span>8:12 AM · may be in the background</span><span class="fresh"><i class="dot empty"></i>Stale</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="pop-foot">Customize Menu Bar…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="how">
+    <!-- Menu bar -->
+    <section class="feature">
+      <div class="container split">
+        <div class="copy">
+          <p class="kicker">Mac menu bar</p>
+          <h2>The device that needs charging comes&nbsp;first.</h2>
+          <p>Normally the menu bar shows your Mac’s own battery. When another device runs low, it takes that spot while it’s low. Open the popover to see everything, with low devices at the top.</p>
+          <p>Or pick up to four devices to keep in the menu bar, shown with battery or device icons.</p>
+          <ul class="facts">
+            <li><kbd>⌘R</kbd> checks iCloud for newer readings</li>
+            <li><kbd>⌘P</kbd> pauses reporting from this Mac</li>
+            <li><kbd>⌘D</kbd> opens the full dashboard</li>
+          </ul>
+        </div>
+        <div class="visual stack-bars" role="img" aria-label="Three ways the menu bar item can look: this Mac at 76 percent, an iPad at 18 percent when it is low, and four chosen devices side by side.">
+          <figure>
+            <div class="bar-strip"><span class="mb-item"><svg class="g"><use href="#g-laptop"/></svg>76%</span><span class="mb-clock">9:41 AM</span></div>
+            <figcaption>Usually: this Mac</figcaption>
+          </figure>
+          <figure>
+            <div class="bar-strip"><span class="mb-item"><svg class="g"><use href="#g-ipad"/></svg>18%</span><span class="mb-clock">9:41 AM</span></div>
+            <figcaption>When another device is low</figcaption>
+          </figure>
+          <figure>
+            <div class="bar-strip"><span class="mb-item"><svg class="g"><use href="#g-laptop"/></svg>76</span><span class="mb-item"><svg class="g"><use href="#g-phone"/></svg>54</span><span class="mb-item"><svg class="g"><use href="#g-ipad"/></svg>18</span><span class="mb-item dim"><svg class="g"><use href="#g-phone"/></svg>63</span><span class="mb-clock">9:41 AM</span></div>
+            <figcaption>Up to four chosen devices. Old readings are dimmed.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Widgets -->
+    <section class="feature" id="widgets">
+      <div class="container">
+        <div class="copy center">
+          <p class="kicker">iPhone and iPad widgets</p>
+          <h2>Your Mac’s battery on your Home&nbsp;Screen.</h2>
+          <p>Small, medium and large widgets show your other devices, styled like the built-in Batteries widget. On the Lock Screen, Battery Sync shows another device, because this one’s level is already in the status bar.</p>
+          <p class="small">When a widget refreshes, it also uploads this device’s level, so your other devices get one more update.</p>
+        </div>
+        <div class="visual widgets-visual">
+          <div class="homescreen" role="img" aria-label="A small widget showing the iPad at 18 percent, marked Low, and a medium widget showing iPhone 54 percent, iPad 18 percent and MacBook Air 76 percent.">
+            <div class="w w-small">
+              <div class="w-top"><b>iPad</b><span class="lowtag">Low</span></div>
+              <div class="w-big low">18%</div>
+              <div class="lbar thick"><i class="low" style="width:18%"></i></div>
+              <div class="fresh recent"><i class="dot"></i>12 min ago</div>
+            </div>
+            <div class="w w-medium">
+              <div class="w-head"><b>Battery Sync</b><span>Cloud checked 9:41 AM</span></div>
+              <div class="w-cols">
+                <div><b>iPhone</b><div class="w-mid">54%</div><div class="lbar"><i style="width:54%"></i></div><div class="fresh recent"><i class="dot"></i>Just now</div></div>
+                <div><b>iPad</b><div class="w-mid low">18%</div><div class="lbar"><i class="low" style="width:18%"></i></div><div class="fresh recent"><i class="dot"></i>12 min ago</div></div>
+                <div><b>MacBook Air</b><div class="w-mid">76%</div><div class="lbar"><i style="width:76%"></i></div><div class="fresh recent"><i class="dot"></i>1 min ago</div></div>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <span class="tile"><svg><use href="#i-ipad"/></svg></span>
-            <div class="row-body">
-              <div class="device-head"><span class="device-name">iPad</span><span class="device-pct">64%</span></div>
-              <div class="bar"><span style="width:64%"></span></div>
-              <div class="device-sub">Charging · measured 6 min ago</div>
-            </div>
-          </div>
-          <div class="row">
-            <span class="tile"><svg><use href="#i-laptop"/></svg></span>
-            <div class="row-body">
-              <div class="device-head"><span class="device-name">MacBook</span><span class="device-pct low">18%</span></div>
-              <div class="bar"><span class="low" style="width:18%"></span></div>
-              <div class="device-sub">On battery · measured just now</div>
+          <div class="lockscreen" role="img" aria-label="A Lock Screen with three Battery Sync widgets, each showing the iPad at 18 percent, measured 12 minutes ago.">
+            <div class="ls-inline"><svg class="g"><use href="#g-battery"/></svg>iPad 18% · measured 12 min ago</div>
+            <div class="ls-time">9:41</div>
+            <div class="ls-widgets">
+              <div class="ls-circ">
+                <svg viewBox="0 0 64 64" class="ring" aria-hidden="true"><circle cx="32" cy="32" r="27" class="track"/><circle cx="32" cy="32" r="27" class="value" stroke-dasharray="30.5 169.6"/></svg>
+                <div class="ls-circ-text"><b>18</b><span>iPad · 12m</span></div>
+              </div>
+              <div class="ls-rect">
+                <div class="dline"><b>iPad</b><b class="mono">18%</b></div>
+                <div class="ls-bar"><i style="width:18%"></i></div>
+                <span>Low · measured 12 min ago</span>
+              </div>
             </div>
           </div>
         </div>
-        <p class="footnote">Example readings.</p>
-      </section>
+      </div>
+    </section>
 
-      <a class="cta" href="/privacy">Read the privacy policy</a>
-    </main>
+    <!-- Freshness -->
+    <section class="feature band" id="freshness">
+      <div class="container">
+        <div class="copy center">
+          <p class="kicker">Honest numbers</p>
+          <h2>Every reading shows how old it&nbsp;is.</h2>
+          <p>A battery level is only useful if you know when it was measured. Battery Sync never estimates or fills gaps. It shows the last real reading and its age, and greys it out once it’s more than an hour old.</p>
+        </div>
+        <div class="ages" role="list">
+          <div class="age-card" role="listitem">
+            <div class="age-head"><span class="fresh recent"><i class="dot"></i>Recent</span><span class="age-range">under 20 min</span></div>
+            <div class="dline"><b>iPhone</b><span class="pct">54%</span></div>
+            <div class="lbar"><i style="width:54%"></i></div>
+            <p>Measured 4 min ago. Treat it as current.</p>
+          </div>
+          <div class="age-card" role="listitem">
+            <div class="age-head"><span class="fresh delayed"><i class="dot half"></i>Delayed</span><span class="age-range">20 to 60 min</span></div>
+            <div class="dline"><b>iPad</b><span class="pct">41%</span></div>
+            <div class="lbar"><i style="width:41%"></i></div>
+            <p>Measured 35 min ago. Probably close, but it may have moved.</p>
+          </div>
+          <div class="age-card stale" role="listitem">
+            <div class="age-head"><span class="fresh"><i class="dot empty"></i>Stale</span><span class="age-range">over an hour</span></div>
+            <div class="dline"><b>Work iPhone</b><span class="pct">63%</span></div>
+            <div class="lbar"><i class="hatch" style="width:63%"></i></div>
+            <p>Measured at 8:12 AM. Shown with its time, not as a live level.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <span>Battery Sync for iPhone, iPad and Mac</span>
+    <!-- Check now -->
+    <section class="feature" id="check">
+      <div class="container split">
+        <div class="copy">
+          <p class="kicker">Check for Newer Reading</p>
+          <h2>Ask an iPhone or iPad to report right&nbsp;now.</h2>
+          <p>If a reading looks old, ask for a new one from your Mac or another device. The request goes through your own iCloud, and the iPhone or iPad answers in the background when iOS allows it.</p>
+          <ol class="steps">
+            <li><b>Request.</b> Your Mac saves a request to your private iCloud.</li>
+            <li><b>Wake.</b> iCloud sends a silent push to that device. You can switch on a visible notification if you want to see each check.</li>
+            <li><b>Report.</b> The device measures its battery and uploads it. Your Mac waits up to 60 seconds.</li>
+          </ol>
+          <p class="small">iOS decides when background work runs, so a check can’t be guaranteed. If nothing arrives, you keep the last reading and its time. Opening Battery Sync on the device always takes a fresh one.</p>
+        </div>
+        <div class="visual">
+          <div class="detail-card" role="img" aria-label="Device details for Work iPhone: 63 percent, measured at 8:12 AM, and a Check for Newer Reading button. Below it, a new reading of 61 percent that arrived 12 seconds after the request.">
+            <div class="dc-head">
+              <span class="dtile lg"><svg class="g"><use href="#g-phone"/></svg></span>
+              <div><b>Work iPhone</b><span>iPhone · same iCloud account</span></div>
+            </div>
+            <div class="dc-big muted">63%</div>
+            <div class="lbar thick"><i class="hatch" style="width:63%"></i></div>
+            <div class="dc-meta"><span>Measured 8:12 AM</span><span class="fresh"><i class="dot empty"></i>Stale</span></div>
+            <div class="dc-button"><svg class="g"><use href="#g-refresh"/></svg>Check for Newer Reading</div>
+            <div class="dc-result">
+              <span class="ok"><svg class="g"><use href="#g-check"/></svg></span>
+              <div><b>61% · measured just now</b><span>Arrived 12 seconds after the request</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alerts -->
+    <section class="feature">
+      <div class="container split reverse">
+        <div class="copy">
+          <p class="kicker">Low-battery alerts</p>
+          <h2>Find out before it dies in a drawer.</h2>
+          <p>Choose a threshold and Battery Sync alerts you once when another device drops below it. The alert resets after the device charges. If a low reading arrives late, the alert says so and how long the device was offline.</p>
+          <div class="chips" aria-label="Alert thresholds">
+            <span>10%</span><span>15%</span><span class="on">20%</span><span>30%</span>
+          </div>
+          <p class="small">Battery Sync checks for low devices when it fetches from iCloud. It doesn’t promise alerts on a fixed schedule.</p>
+        </div>
+        <div class="visual notes" role="img" aria-label="Two notifications. One says iPad is low at 18 percent, measured 12 minutes ago. The other says Work iPhone last reported low at 15 percent and was received late.">
+          <div class="note">
+            <img src="/assets/icon.svg" alt="">
+            <div>
+              <div class="note-top"><b>iPad is low: 18%</b><span>now</span></div>
+              <p>On battery, measured 12 min ago. It stops reporting if it runs out.</p>
+            </div>
+          </div>
+          <div class="note">
+            <img src="/assets/icon.svg" alt="">
+            <div>
+              <div class="note-top"><b>Work iPhone last reported low</b><span>8:59 AM</span></div>
+              <p>15% at 8:12 AM, received late after 47 min offline. The level may be different now.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="feature">
+      <div class="container">
+        <div class="privacy-panel">
+          <div class="copy">
+            <p class="kicker">Privacy</p>
+            <h2>It stays in your iCloud.</h2>
+            <p>Battery Sync has no server and no account of its own. Readings go to the private iCloud database of your Apple Account, which only your devices can read. The developer can’t see them.</p>
+            <a class="textlink" href="/privacy">Read the privacy policy <svg class="g"><use href="#g-arrow"/></svg></a>
+          </div>
+          <ul class="privacy-list">
+            <li><b>No ads, analytics or tracking</b><span>No third-party SDKs.</span></li>
+            <li><b>No location or serial numbers</b><span>Just battery level, charging state, device name, times and an install ID.</span></li>
+            <li><b>Delete any time</b><span>Remove one device’s history, or everything, from Settings.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="feature last">
+      <div class="container">
+        <div class="copy center">
+          <h2>When each device reports</h2>
+          <p>Apple sets different rules for each platform, so here’s exactly what to expect.</p>
+        </div>
+        <div class="specs">
+          <div class="spec">
+            <span class="dtile"><svg class="g"><use href="#g-laptop"/></svg></span>
+            <h3>Mac</h3>
+            <p>Reports when power changes, when it wakes, and every 10, 15 or 30 minutes while awake. It never makes up readings for time it was asleep.</p>
+          </div>
+          <div class="spec">
+            <span class="dtile"><svg class="g"><use href="#g-phone"/></svg></span>
+            <h3>iPhone and iPad</h3>
+            <p>Report when the app is open, when iOS allows a background refresh, when the widget updates, and when you ask with Check for Newer Reading.</p>
+          </div>
+          <div class="spec">
+            <span class="dtile"><svg class="g"><use href="#g-bolt"/></svg></span>
+            <h3>On every charge</h3>
+            <p>On iPhone and iPad, add the Report Battery action to a Shortcuts automation that runs when you connect or disconnect a charger. Setup in the app walks you through it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot-inner">
+      <a class="brand" href="/"><img src="/assets/icon.svg" alt="">Battery Sync</a>
+      <span>For iPhone, iPad and Mac. Device readings shown on this page are examples.</span>
       <a href="/privacy">Privacy Policy</a>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
 </html>
