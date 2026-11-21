@@ -32,7 +32,6 @@
     <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9.5 7V4.5h5V7M6 7l1 13h10l1-13"/></symbol>
     <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6.5" y="5" width="3.5" height="14" rx="1"/><rect x="14" y="5" width="3.5" height="14" rx="1"/></symbol>
     <symbol id="i-app" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12h6"/></symbol>
-    <symbol id="i-history" viewBox="0 0 24 24"><path d="M3.5 12a8.5 8.5 0 1 0 2.5-6"/><path d="M3 3.5V8h4.5"/><path d="M12 8v4l3 2"/></symbol>
     <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
     <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
     <symbol id="i-message" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
@@ -221,8 +220,8 @@
           <div class="row">
             <span class="tile"><svg><use href="#i-share"/></svg></span>
             <div class="row-body">
-              <p class="row-title">CSV export</p>
-              <p class="row-detail">You can export a device’s readings as a CSV file. It is created only when you ask and goes wherever you choose to save or share it. After that, it is handled by the app or service you send it to.</p>
+              <p class="row-title">CSV export on Mac</p>
+              <p class="row-detail">On Mac, Sync Health → Export local CSV saves that Mac’s local readings and diagnostic log as a CSV file. It is created only when you ask and saved wherever you choose. After that, it is handled by whatever app or service you open or share it with.</p>
             </div>
           </div>
         </div>
@@ -257,18 +256,6 @@
             <div class="row-body">
               <p class="row-title">Deleting the app</p>
               <p class="row-detail">Removes its local data. Readings already in iCloud stay until you delete them with one of the options above.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="earlier">
-        <h2 class="section-title" id="earlier">Earlier test builds</h2>
-        <div class="card">
-          <div class="row">
-            <span class="tile"><svg><use href="#i-history"/></svg></span>
-            <div class="row-body">
-              <p class="row-detail">Some early test versions of Battery Sync registered a device’s push token and installation identifier with a small server operated by the developer to deliver wake requests. That service has been retired and no longer accepts data. Current versions do not contact it.</p>
             </div>
           </div>
         </div>
