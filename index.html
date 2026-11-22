@@ -26,6 +26,7 @@
     <symbol id="g-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M7.1 6.3a7.5 7.5 0 1 0 9.8 0"/></symbol>
     <symbol id="g-battery" viewBox="0 0 24 24"><rect x="2" y="7.5" width="17.5" height="9" rx="2.4"/><path d="M22 10.8v2.4"/><rect fill="currentColor" stroke="none" x="4" y="9.5" width="3.5" height="5" rx=".8"/></symbol>
     <symbol id="g-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="g-cloud" viewBox="0 0 24 24"><path d="M7 19h10.5a4.5 4.5 0 0 0 .4-8.98A6.5 6.5 0 0 0 5.4 9.6 4.75 4.75 0 0 0 7 19z"/></symbol>
     <symbol id="g-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
   </svg>
 
@@ -36,6 +37,7 @@
         <a href="#widgets">Widgets</a>
         <a href="#freshness">Freshness</a>
         <a href="#check">Check now</a>
+        <a href="#sharing">Sharing</a>
         <a href="/privacy">Privacy</a>
       </div>
     </div>
@@ -46,12 +48,12 @@
       <div class="hero-copy">
         <p class="eyebrow">For iPhone, iPad and Mac</p>
         <h1>Your iPad is at&nbsp;18%.<br><span>Now you know.</span></h1>
-        <p class="hero-lede">Battery Sync shows the battery of every device you own on every other one: in the Mac menu bar, in widgets on your iPhone and iPad, and in the app. It syncs through your own private iCloud.</p>
+        <p class="hero-lede">Battery Sync shows the battery of every device you own on every other one: in the Mac menu bar, in widgets on your iPhone and iPad, and in the app. It syncs through your own private iCloud, and you can share your devices with family on theirs.</p>
         <div class="hero-actions">
           <a class="button primary" href="#how">See how it works <svg class="g"><use href="#g-arrow"/></svg></a>
           <a class="button" href="/privacy">Read the privacy policy</a>
         </div>
-        <p class="hero-note">Requires iOS 27, iPadOS 27 or macOS 27 and the same Apple Account on each device.</p>
+        <p class="hero-note">Requires iOS 26, iPadOS 26 or macOS 26. Sign in to the same Apple Account on your own devices; anyone else joins through sharing.</p>
       </div>
 
       <div class="hero-visual" aria-label="The Battery Sync menu bar popover on a Mac, listing an iPad at 18 percent, a MacBook Air at 76 percent and charging, an iPhone at 54 percent, and a work iPhone whose reading is stale." role="img">
@@ -256,6 +258,93 @@
       </div>
     </section>
 
+    <!-- Sharing -->
+    <section class="feature band" id="sharing">
+      <div class="container">
+        <div class="copy center">
+          <p class="kicker">Sharing</p>
+          <h2>Keep an eye on the family’s batteries&nbsp;too.</h2>
+          <p>Share your devices with someone on a different Apple Account. Invite them, or send a link. Your devices then show up on theirs, under your name, in the app, the widgets, the Mac menu bar and low-battery alerts.</p>
+          <p class="small">It works both ways, so everyone in a household can share and see every device from one place.</p>
+        </div>
+
+        <div class="share-visual">
+          <figure class="share-pane">
+            <figcaption><b>Sam shares</b> · Settings → Sharing</figcaption>
+            <div class="screen" role="img" aria-label="Sam’s sharing settings: shared only with people Sam invites, shown as Sam’s devices. Maya has joined and can request readings. Jordan is invited but hasn’t accepted yet.">
+              <p class="set-label">Share your devices</p>
+              <div class="set-card">
+                <div class="set-row">
+                  <div><b>Only people you invite</b><span>Invite people, copy the link, or allow anyone with the link.</span></div>
+                  <span class="rbtn">Manage…</span>
+                </div>
+                <div class="set-row">
+                  <div><b>Your name</b><span>People you share with see “Sam’s devices”.</span></div>
+                  <span class="set-value">Sam</span>
+                </div>
+                <div class="set-row">
+                  <div class="who"><span class="avatar">M</span><b>Maya</b></div>
+                  <span class="rbtn danger">Remove</span>
+                </div>
+                <div class="set-row sub">
+                  <div><b>Can request readings</b><span>Lets Maya ask your iPhones and iPads for a fresh reading.</span></div>
+                  <span class="switch on"></span>
+                </div>
+                <div class="set-row">
+                  <div class="who"><span class="avatar dim">J</span><div><b>Jordan</b><span>Invited · hasn’t accepted yet</span></div></div>
+                  <span class="rbtn danger">Remove</span>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <div class="share-link" aria-hidden="true"><span><svg class="g"><use href="#g-cloud"/></svg></span></div>
+
+          <figure class="share-pane">
+            <figcaption><b>Maya sees</b> · Devices</figcaption>
+            <div class="screen" role="img" aria-label="Maya’s Devices screen: her own iPhone at 81 percent, then a group called Sam’s devices with an iPad at 18 percent, low, and a MacBook Air at 76 percent, charging, each marked Shared by Sam.">
+              <p class="group-sep"><span>Maya’s devices</span></p>
+              <div class="set-card">
+                <div class="prow">
+                  <span class="dtile"><svg class="g"><use href="#g-phone"/></svg></span>
+                  <div class="pbody"><b>iPhone</b><span>This iPhone · On battery</span></div>
+                  <div class="pval"><span class="pct">81%</span><div class="lbar"><i style="width:81%"></i></div></div>
+                </div>
+              </div>
+              <p class="group-sep"><span>Sam’s devices</span></p>
+              <div class="set-card">
+                <div class="prow">
+                  <span class="dtile"><svg class="g"><use href="#g-ipad"/></svg></span>
+                  <div class="pbody"><b>iPad</b><span>Shared by Sam</span><span class="fresh recent"><i class="dot"></i>12 min ago</span></div>
+                  <div class="pval"><span class="pct low">18%</span><div class="lbar"><i class="low" style="width:18%"></i></div></div>
+                </div>
+                <div class="prow">
+                  <span class="dtile"><svg class="g"><use href="#g-laptop"/></svg></span>
+                  <div class="pbody"><b>MacBook Air</b><span>Shared by Sam</span><span class="fresh recent"><svg class="g bolt"><use href="#g-bolt"/></svg>Charging · 1 min ago</span></div>
+                  <div class="pval"><span class="pct">76%</span><div class="lbar"><i style="width:76%"></i></div></div>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+
+        <dl class="share-terms">
+          <div>
+            <dt>View only</dt>
+            <dd>People who join see your devices’ names, battery levels, charging state and history. They can’t rename, remove or change anything.</dd>
+          </div>
+          <div>
+            <dt>Readings on request, if you allow it</dt>
+            <dd>Turn on Can request readings for one person, and they can ask your iPhones and iPads for a fresh reading, the same way you do.</dd>
+          </div>
+          <div>
+            <dt>Undo it any time</dt>
+            <dd>Remove one person or stop sharing with everyone. On their side, Stop Viewing takes your devices off all of theirs.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
     <!-- Alerts -->
     <section class="feature">
       <div class="container split reverse">
@@ -294,12 +383,13 @@
           <div class="copy">
             <p class="kicker">Privacy</p>
             <h2>It stays in your iCloud.</h2>
-            <p>Battery Sync has no server and no account of its own. Readings go to the private iCloud database of your Apple Account, which only your devices can read. The developer can’t see them.</p>
+            <p>Battery Sync has no server and no account of its own. Readings go to the private iCloud database of your Apple Account. Only your devices can read them, plus anyone you choose to share with. The developer can’t see them.</p>
             <a class="textlink" href="/privacy">Read the privacy policy <svg class="g"><use href="#g-arrow"/></svg></a>
           </div>
           <ul class="privacy-list">
             <li><b>No ads, analytics or tracking</b><span>No third-party SDKs.</span></li>
             <li><b>No location or serial numbers</b><span>Just battery level, charging state, device name, times and an install ID.</span></li>
+            <li><b>Shared only when you say so</b><span>Invite people one by one or by link, and remove them whenever you like.</span></li>
             <li><b>Delete any time</b><span>Remove one device’s history, or everything, from Settings.</span></li>
           </ul>
         </div>

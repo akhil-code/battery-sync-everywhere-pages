@@ -34,6 +34,12 @@
     <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
     <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
     <symbol id="i-message" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M19 8v6M16 11h6"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M15.5 4.8a3.5 3.5 0 0 1 0 6.4M17.5 14.2a6.5 6.5 0 0 1 4 5.8"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3.6-3.6a4 4 0 0 0-5.7-5.7L12 6.3"/><path d="M14 10a4 4 0 0 0-5.7 0l-3.6 3.6a4 4 0 0 0 5.7 5.7L12 17.7"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></symbol>
+    <symbol id="i-leave" viewBox="0 0 24 24"><path d="M14 4h5v16h-5"/><path d="M10 8l-4 4 4 4M6 12h10"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
   </svg>
 
@@ -47,10 +53,11 @@
       <img class="app-icon" src="/assets/icon.svg" alt="Battery Sync app icon">
       <h1>Privacy Policy</h1>
       <p class="meta">Effective November 21, 2026</p>
-      <p class="lede">Battery Sync shows the battery levels of your iPhone, iPad and Mac in one place. This policy explains what the app stores, where it is stored, and how you can delete it. It applies to the Battery Sync app, its widgets and its notification extension on iPhone, iPad and Mac.</p>
+      <p class="lede">Battery Sync shows the battery levels of your iPhone, iPad and Mac in one place. This policy explains what the app stores, where it is stored, who can see it, and how you can delete it. It applies to the Battery Sync app, its widgets and its notification extension on iPhone, iPad and Mac.</p>
       <div class="badges">
         <span class="badge">Stored in your private iCloud</span>
         <span class="badge blue">No tracking</span>
+        <span class="badge">Shared only if you choose</span>
       </div>
     </header>
 
@@ -63,6 +70,13 @@
             <div class="row-body">
               <p class="row-title">Your data stays in your iCloud</p>
               <p class="row-detail">Battery readings are stored in your own private iCloud database. The developer cannot see them.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile blue"><svg><use href="#i-share"/></svg></span>
+            <div class="row-body">
+              <p class="row-title">Shared only with people you choose</p>
+              <p class="row-detail">Nobody else sees your devices unless you invite them or send them a link. You can remove them at any time.</p>
             </div>
           </div>
           <div class="row">
@@ -127,8 +141,64 @@
               <p class="row-detail">When you ask an iPhone or iPad to report, the request, its time and the installation identifiers of the two devices involved.</p>
             </div>
           </div>
+          <div class="row">
+            <span class="tile"><svg><use href="#i-people"/></svg></span>
+            <div class="row-body">
+              <p class="row-title">Sharing details, if you share</p>
+              <p class="row-detail">The people you invited, as Apple’s sharing screen records them (a name, email address or phone number), whether each has accepted, whether anyone with the link can join, and who may request readings.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile"><svg><use href="#i-tag"/></svg></span>
+            <div class="row-body">
+              <p class="row-title">Your sharing name</p>
+              <p class="row-detail">The name people you share with see above your devices, such as “Sam’s devices”. Battery Sync suggests the name on your Apple Account or, on a Mac, your Mac user name. You can change it in Settings → Sharing.</p>
+            </div>
+          </div>
         </div>
-        <p class="footnote">This private CloudKit database belongs to you and is managed by Apple under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. Only devices signed in to the same Apple Account can read it. The developer of Battery Sync has no access to it.</p>
+        <p class="footnote">This private CloudKit database belongs to you and is managed by Apple under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. Only devices signed in to your Apple Account can read it, plus the people you share with, as described below. The developer of Battery Sync has no access to it.</p>
+      </section>
+
+      <section aria-labelledby="sharing">
+        <h2 class="section-title" id="sharing">Sharing with other people</h2>
+        <div class="card">
+          <div class="row">
+            <span class="tile"><svg><use href="#i-link"/></svg></span>
+            <div class="row-body">
+              <p class="row-title">How sharing works</p>
+              <p class="row-detail">Sharing is off until you turn it on in Settings → Sharing. It uses Apple’s iCloud sharing: you invite specific people, or allow anyone with the link to join. Invitations are sent with Apple’s sharing screen, so Battery Sync never reads your contacts.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile"><svg><use href="#i-eye"/></svg></span>
+            <div class="row-body">
+              <p class="row-title">What people you share with see</p>
+              <p class="row-detail">The names and types of all your devices, their battery levels, charging state, reading history and times, and your sharing name. They can view this but can’t change or delete anything.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile"><svg><use href="#i-request"/></svg></span>
+            <div class="row-body">
+              <p class="row-title">Requesting readings</p>
+              <p class="row-detail">Off for each person until you turn on Can request readings for them. Then they can ask your iPhones and iPads for a fresh reading. The request is saved in your iCloud with the installation identifier of their device, and iCloud marks which account made it, so your device can limit how often it answers.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile"><svg><use href="#i-people"/></svg></span>
+            <div class="row-body">
+              <p class="row-title">Devices shared with you</p>
+              <p class="row-detail">Another person’s readings stay in their iCloud. Battery Sync on your devices downloads them to show in the app, widgets, Mac menu bar and low-battery alerts, marked with that person’s name. The person sharing can see your name or contact as Apple shows it on the share, and whether you have joined.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="tile"><svg><use href="#i-leave"/></svg></span>
+            <div class="row-body">
+              <p class="row-title">Ending sharing</p>
+              <p class="row-detail">Remove one person, turn off their requests, or stop sharing with everyone in Settings → Sharing. To stop seeing someone else’s devices, use Stop Viewing; their devices are removed from every device on your Apple Account.</p>
+            </div>
+          </div>
+        </div>
+        <p class="footnote">Copies already downloaded to someone’s device can stay there until their app next checks iCloud, or until they delete Battery Sync.</p>
       </section>
 
       <section aria-labelledby="local">
@@ -145,14 +215,14 @@
             <span class="tile"><svg><use href="#i-sliders"/></svg></span>
             <div class="row-body">
               <p class="row-title">Settings</p>
-              <p class="row-detail">Device names, pinned devices, low-battery alert thresholds and menu bar choices.</p>
+              <p class="row-detail">Device names, pinned devices, low-battery alert thresholds, menu bar choices and your sharing name.</p>
             </div>
           </div>
           <div class="row">
             <span class="tile"><svg><use href="#i-widget"/></svg></span>
             <div class="row-body">
               <p class="row-title">Widget data</p>
-              <p class="row-detail">The latest readings, shared with Battery Sync’s widgets through storage that only Battery Sync can read.</p>
+              <p class="row-detail">The latest readings, including devices shared with you, passed to Battery Sync’s widgets through storage that only Battery Sync can read.</p>
             </div>
           </div>
         </div>
@@ -172,7 +242,7 @@
             <span class="tile"><svg><use href="#i-bell-low"/></svg></span>
             <div class="row-body">
               <p class="row-title">Low-battery alerts</p>
-              <p class="row-detail">Created on your device from readings already in your iCloud.</p>
+              <p class="row-detail">Created on your device from readings it has already downloaded, including devices shared with you.</p>
             </div>
           </div>
         </div>
@@ -200,7 +270,7 @@
             <span class="tile gray"><svg><use href="#i-hand"/></svg></span>
             <div class="row-body">
               <p class="row-title">Sell or share your data</p>
-              <p class="row-detail">Your data is never sold or shared, and you are not tracked across apps or websites.</p>
+              <p class="row-detail">Your data is never sold. It is shared only with people you choose, and you are not tracked across apps or websites.</p>
             </div>
           </div>
           <div class="row">
@@ -220,14 +290,14 @@
             <span class="tile red"><svg><use href="#i-trash"/></svg></span>
             <div class="row-body">
               <p class="row-title">Remove this device and delete history</p>
-              <p class="row-detail">In Settings. Stops reporting from that device, deletes its readings from your iCloud and clears its local queue and diagnostic log.</p>
+              <p class="row-detail">In Settings. Stops reporting from that device, deletes its readings from your iCloud, so people you share with no longer see it, and clears its local queue and diagnostic log.</p>
             </div>
           </div>
           <div class="row danger">
             <span class="tile red"><svg><use href="#i-person"/></svg></span>
             <div class="row-body">
               <p class="row-title">Delete account</p>
-              <p class="row-detail">Deletes Battery Sync data for every device in your iCloud. Your Apple Account itself is not affected.</p>
+              <p class="row-detail">Deletes Battery Sync data for every device in your iCloud and ends any sharing. Your Apple Account itself is not affected.</p>
             </div>
           </div>
           <div class="row">
